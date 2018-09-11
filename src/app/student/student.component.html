@@ -1,7 +1,9 @@
 <div *ngIf="student">
-  Student: {{student?.name}} <!-- Interpolação -->
-  <div *ngIf="student?.isJedi">
-    jedi Temple: {{student?.temple}}
+  Student: <a href="#" (click)="clicked()">{{student?.name}}</a> <!-- Interpolação -->
+  <div *ngIf="student?.isJedi">       <!-- Com a referência, pode se chamar metodos e atributos -->
+    jedi Temple: {{student?.temple}} <button (click)="description.focus()">Focus!</button><br/>
+    <textarea #description></textarea> <!-- # para dar nome a variavel.
+                                            Utilizado para obter referência-->
   </div>
 </div>
 
