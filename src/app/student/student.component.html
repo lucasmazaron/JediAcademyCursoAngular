@@ -1,6 +1,6 @@
-<div *ngFor="let student of students">
+<div>
   Student: {{student.name}} <!-- Interpolação -->
-  <div [hidden]="!isJedi">
+  <div *ngIf="student.isJedi">
     jedi Temple: {{student.temple}}
   </div>
 </div>
