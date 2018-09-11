@@ -1,6 +1,10 @@
-<div>
-  Student: {{student.name}} <!-- Interpolação -->
-  <div *ngIf="student.isJedi">
-    jedi Temple: {{student.temple}}
+<div *ngIf="student">
+  Student: {{student?.name}} <!-- Interpolação -->
+  <div *ngIf="student?.isJedi">
+    jedi Temple: {{student?.temple}}
   </div>
 </div>
+
+<p *ngIf="!student">
+  Sem dados para exibir.
+</p>
